@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Fernando Lemos</title>
+    <link href="//fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet" type="text/css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+var center = function() {
+    var width = $(window).width();
+    var height = $(window).height();
+    var el = $('#container');
+    if (width > 600 && height > el.height()) {
+        el.css('position', 'absolute')
+          .css('left', (width - el.width()) / 2 + 'px')
+          .css('top', (height - el.height()) / 2.3 + 'px');
+    }
+    else {
+        el.css('position', 'static')
+          .css('left', 0)
+          .css('right', 0);
+    }
+};
+$(document).ready(center);
+$(window).resize(center);
+    </script>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+}
+#container {
+    max-width: 600px;
+    padding: 10px 20px 20px 20px;
+    font-family: 'Playfair Display', serif;
+}
+#container h1 {
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+#container p {
+    font-size: 15px;
+    color: #bbb;
+}
+#container a {
+    color: #bbf;
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <h1>Hi, my name is Fernando Lemos and I'm a software developer.</h1>
+    <p>For more information and contact, please visit my <a href="https://github.com/fernandotcl">GitHub profile page</a>.
+</div>
+
+</body>
+</html>
