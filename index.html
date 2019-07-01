@@ -2,33 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Fernando Lemos</title>
-    <link href="//fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet" type="text/css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script>
-var center = function() {
-    var width = $(window).width();
-    var height = $(window).height();
-    var el = $('#container');
-    if (width > 600 && height > el.height()) {
-        el.css('position', 'absolute')
-          .css('left', (width - el.width()) / 2 + 'px')
-          .css('top', (height - el.height()) / 2.3 + 'px');
-    }
-    else {
-        el.css('position', 'static')
-          .css('left', 0)
-          .css('right', 0);
-    }
-};
-$(document).ready(center);
-$(window).resize(center);
-    </script>
     <style>
 :root {
     --bg-color: #fff;
     --fg-color: #000;
-    --dimmed-color: #aaa;
+    --dimmed-color: #999;
     --link-color: #99f;
 }
 @media (prefers-color-scheme: dark) {
@@ -46,20 +26,26 @@ $(window).resize(center);
 body {
     background-color: var(--bg-color);
     color: var(--fg-color);
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
 }
 #container {
+    min-width: 280px;
     max-width: 600px;
     padding: 10px 20px 20px 20px;
-    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 #container h1 {
     margin-bottom: 30px;
     font-size: 36px;
+    font-weight: 200;
 }
 #container p {
-    font-family: sans-serif;
-    font-size: 15px;
+    font-size: 18px;
     color: var(--dimmed-color);
+    font-weight: 300;
 }
 #container a {
     color: var(--link-color);
